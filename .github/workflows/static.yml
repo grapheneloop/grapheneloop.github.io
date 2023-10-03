@@ -42,4 +42,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v2
         with:
-          source: docs
+          source: ../../docs
