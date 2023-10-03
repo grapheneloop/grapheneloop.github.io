@@ -1,9 +1,8 @@
-baseURL = "https://grapheneloop.github.io/docs/"
+baseURL = "https://grapheneloop.github.io/"
 
 languageCode = "en-us"
 DefaultContentLanguage = "en"
 title = "Hugo Techdoc Theme"
-theme = "hugo-theme-techdoc"
 
 hasCJKLanguage = true
 metaDataFormat = "yaml"
