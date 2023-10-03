@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://grapheneloop.github.io/security/</loc>
+    <lastmod>2018-12-08T15:26:15+00:00</lastmod>
+  </url><url>
     <loc>https://grapheneloop.github.io/getting-started/</loc>
     <lastmod>2018-12-08T15:26:15+00:00</lastmod>
   </url><url>
@@ -18,6 +21,9 @@
     <lastmod>2017-10-17T15:26:15+00:00</lastmod>
   </url><url>
     <loc>https://grapheneloop.github.io/getting-started/installation/</loc>
+    <lastmod>2017-10-17T15:26:15+00:00</lastmod>
+  </url><url>
+    <loc>https://grapheneloop.github.io/security/installation/</loc>
     <lastmod>2017-10-17T15:26:15+00:00</lastmod>
   </url><url>
     <loc>https://grapheneloop.github.io/sample/</loc>
@@ -47,7 +53,13 @@
     <loc>https://grapheneloop.github.io/getting-started/configuration/</loc>
     <lastmod>2019-10-26T15:26:15+00:00</lastmod>
   </url><url>
+    <loc>https://grapheneloop.github.io/security/configuration/</loc>
+    <lastmod>2019-10-26T15:26:15+00:00</lastmod>
+  </url><url>
     <loc>https://grapheneloop.github.io/getting-started/screenshot/</loc>
+    <lastmod>2019-10-26T15:26:15+00:00</lastmod>
+  </url><url>
+    <loc>https://grapheneloop.github.io/security/screenshot/</loc>
     <lastmod>2019-10-26T15:26:15+00:00</lastmod>
   </url><url>
     <loc>https://grapheneloop.github.io/chapter2/</loc>
