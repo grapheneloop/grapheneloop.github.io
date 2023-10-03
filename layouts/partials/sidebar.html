@@ -1,7 +1,4 @@
 {{ if ne .Site.Params.menu_style "" }}
-<script>
-    alert('test{{.Site.LanguageCode}}<<')
-</script>
 <div class="sidebar">
 {{ if eq .Site.Params.menu_style "open-menu" }}
 {{- partial "menu/open-menu.html" . -}}

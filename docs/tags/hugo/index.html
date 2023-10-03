@@ -15,7 +15,7 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha256-4XodgW4TwIJuDtf+v6vDJ39FVxI0veC/kSCCmnFp7ck=" crossorigin="anonymous"></script>
 <script src="https://grapheneloop.github.io/js/bundle.js"></script><style>
-:root {}
+:root {--custom-background-color: green;}
 </style>
 <meta property="og:title" content="hugo" />
 <meta property="og:description" content="put your description" />
@@ -58,16 +58,13 @@ Last updated on 2 Apr 2014
 </nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
 </footer>
 </main>
-<script>
-    alert('testen-us<<')
-</script>
 <div class="sidebar">
 
-<nav class="slide-menu">
+<nav class="open-menu">
 <ul>
 <li class=""><a href="https://grapheneloop.github.io/">Home</a></li>
 
-<li class=" has-sub-menu"><a href="https://grapheneloop.github.io/security/">Security<span class="mark closed">+</span></a>
+<li class=""><a href="https://grapheneloop.github.io/security/">Security</a>
   
 <ul class="sub-menu">
 <li class=""><a href="https://grapheneloop.github.io/security/installation/">Installation</a></li>
@@ -77,17 +74,7 @@ Last updated on 2 Apr 2014
   
 </li>
 
-<li class=" has-sub-menu"><a href="https://grapheneloop.github.io/getting-started/">Getting Started<span class="mark closed">+</span></a>
-  
-<ul class="sub-menu">
-<li class=""><a href="https://grapheneloop.github.io/getting-started/installation/">Installation</a></li>
-<li class=""><a href="https://grapheneloop.github.io/getting-started/configuration/">Configuration</a></li>
-<li class=""><a href="https://grapheneloop.github.io/getting-started/screenshot/">Screenshot</a></li>
-</ul>
-  
-</li>
-
-<li class=" has-sub-menu"><a href="https://grapheneloop.github.io/sample/">Sample Document<span class="mark closed">+</span></a>
+<li class=""><a href="https://grapheneloop.github.io/sample/">Sample Document</a>
   
 <ul class="sub-menu">
 <li class=""><a href="https://grapheneloop.github.io/sample/markdown-syntax/">Markdown Syntax</a></li>
@@ -99,71 +86,27 @@ Last updated on 2 Apr 2014
   
 </li>
 
-<li class=" has-sub-menu"><a href="https://grapheneloop.github.io/chapter1/">Chapter 1<span class="mark closed">+</span></a>
-  
-<ul class="sub-menu">
-<li class=""><a href="https://grapheneloop.github.io/chapter1/1/">Chapter 1-1</a></li>
-<li class=""><a href="https://grapheneloop.github.io/chapter1/2/">Chapter 1-2</a></li>
-<li class=""><a href="https://grapheneloop.github.io/chapter1/3/">Chapter 1-3</a></li>
-<li class=""><a href="https://grapheneloop.github.io/chapter1/4/">Chapter 1-4</a></li>
-</ul>
-  
-</li>
-
-<li class=" has-sub-menu"><a href="https://grapheneloop.github.io/chapter2/">Chapter 2 (weighted)<span class="mark closed">+</span></a>
-  
-<ul class="sub-menu">
-<li class=""><a href="https://grapheneloop.github.io/chapter2/3/">Chapter 2-3 (weight: 10)</a></li>
-<li class=""><a href="https://grapheneloop.github.io/chapter2/4/">Chapter 2-4 (weight: 20)</a></li>
-<li class=""><a href="https://grapheneloop.github.io/chapter2/2/">Chapter 2-2 (weight: 30)</a></li>
-<li class=""><a href="https://grapheneloop.github.io/chapter2/1/">Chapter 2-1 (weight: 40)</a></li>
-<li class=""><a href="https://grapheneloop.github.io/chapter2/5/">Chapter 2-0 (weight: no set)</a></li>
-</ul>
-  
-</li>
-
-<li class=" has-sub-menu"><a href="https://grapheneloop.github.io/chapter3/">Chapter 3 (hierarchized)<span class="mark closed">+</span></a>
-  
-<ul class="sub-menu">
-<li class=""><a href="https://grapheneloop.github.io/chapter3/1/">Chapter 3-1</a></li>
-
-<li class=" has-sub-menu"><a href="https://grapheneloop.github.io/chapter3/chapter3-2/">Chapter 3-2<span class="mark closed">+</span></a>
-  
-<ul class="sub-menu">
-<li class=""><a href="https://grapheneloop.github.io/chapter3/chapter3-2/1/">Chapter 3-2-1</a></li>
-<li class=""><a href="https://grapheneloop.github.io/chapter3/chapter3-2/2/">Chapter 3-2-2</a></li>
-<li class=""><a href="https://grapheneloop.github.io/chapter3/chapter3-2/3/">Chapter 3-2-3</a></li>
-<li class=""><a href="https://grapheneloop.github.io/chapter3/chapter3-2/4/">Chapter 3-2-4</a></li>
-</ul>
-  
-</li>
-<li class=""><a href="https://grapheneloop.github.io/chapter3/3/">Chapter 3-3</a></li>
-<li class=""><a href="https://grapheneloop.github.io/chapter3/4/">Chapter 3-4</a></li>
-</ul>
-  
-</li>
-
-<li class=" has-sub-menu"><a href="https://grapheneloop.github.io/chapter4/">Chapter 4 (unlimited levels)<span class="mark closed">+</span></a>
+<li class=""><a href="https://grapheneloop.github.io/chapter4/">Chapter 4 (unlimited levels)</a>
   
 <ul class="sub-menu">
 
-<li class=" has-sub-menu"><a href="https://grapheneloop.github.io/chapter4/chapter4-1/">Chapter 4-1<span class="mark closed">+</span></a>
+<li class=""><a href="https://grapheneloop.github.io/chapter4/chapter4-1/">Chapter 4-1</a>
   
 <ul class="sub-menu">
 
-<li class=" has-sub-menu"><a href="https://grapheneloop.github.io/chapter4/chapter4-1/chapter4-1-1/">Chapter 4-1-1<span class="mark closed">+</span></a>
+<li class=""><a href="https://grapheneloop.github.io/chapter4/chapter4-1/chapter4-1-1/">Chapter 4-1-1</a>
   
 <ul class="sub-menu">
 
-<li class=" has-sub-menu"><a href="https://grapheneloop.github.io/chapter4/chapter4-1/chapter4-1-1/chapter4-1-1-1/">Chapter 4-1-1-1<span class="mark closed">+</span></a>
+<li class=""><a href="https://grapheneloop.github.io/chapter4/chapter4-1/chapter4-1-1/chapter4-1-1-1/">Chapter 4-1-1-1</a>
   
 <ul class="sub-menu">
 
-<li class=" has-sub-menu"><a href="https://grapheneloop.github.io/chapter4/chapter4-1/chapter4-1-1/chapter4-1-1-1/chapter4-1-1-1-1/">Chapter 4-1-1-1-1<span class="mark closed">+</span></a>
+<li class=""><a href="https://grapheneloop.github.io/chapter4/chapter4-1/chapter4-1-1/chapter4-1-1-1/chapter4-1-1-1-1/">Chapter 4-1-1-1-1</a>
   
 <ul class="sub-menu">
 
-<li class=" has-sub-menu"><a href="https://grapheneloop.github.io/chapter4/chapter4-1/chapter4-1-1/chapter4-1-1-1/chapter4-1-1-1-1/chapter4-1-1-1-1-1/">Chapter 4-1-1-1-1-1<span class="mark closed">+</span></a>
+<li class=""><a href="https://grapheneloop.github.io/chapter4/chapter4-1/chapter4-1-1/chapter4-1-1-1/chapter4-1-1-1-1/chapter4-1-1-1-1-1/">Chapter 4-1-1-1-1-1</a>
   
 <ul class="sub-menu">
 
