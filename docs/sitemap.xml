@@ -2,7 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://grapheneloop.github.io/interservice-communication-patterns/</loc>
+    <lastmod>2018-12-08T15:26:15+00:00</lastmod>
+  </url><url>
     <loc>https://grapheneloop.github.io/security/</loc>
+    <lastmod>2018-12-08T15:26:15+00:00</lastmod>
+  </url><url>
+    <loc>https://grapheneloop.github.io/interservice-communication-patterns/synch/</loc>
+    <lastmod>2018-12-08T15:26:15+00:00</lastmod>
+  </url><url>
+    <loc>https://grapheneloop.github.io/security/wifi-security-basics/</loc>
+    <lastmod>2018-12-08T15:26:15+00:00</lastmod>
+  </url><url>
+    <loc>https://grapheneloop.github.io/interservice-communication-patterns/async/</loc>
+    <lastmod>2018-12-08T15:26:15+00:00</lastmod>
+  </url><url>
+    <loc>https://grapheneloop.github.io/interservice-communication-patterns/synch-and-async/</loc>
+    <lastmod>2018-12-08T15:26:15+00:00</lastmod>
+  </url><url>
+    <loc>https://grapheneloop.github.io/interservice-communication-patterns/mediator/</loc>
+    <lastmod>2018-12-08T15:26:15+00:00</lastmod>
+  </url><url>
+    <loc>https://grapheneloop.github.io/interservice-communication-patterns/intermediary/</loc>
+    <lastmod>2018-12-08T15:26:15+00:00</lastmod>
+  </url><url>
+    <loc>https://grapheneloop.github.io/interservice-communication-patterns/pub-sub/</loc>
+    <lastmod>2018-12-08T15:26:15+00:00</lastmod>
+  </url><url>
+    <loc>https://grapheneloop.github.io/interservice-communication-patterns/callback/</loc>
+    <lastmod>2018-12-08T15:26:15+00:00</lastmod>
+  </url><url>
+    <loc>https://grapheneloop.github.io/interservice-communication-patterns/event-sourcing-and-cqrs/</loc>
+    <lastmod>2018-12-08T15:26:15+00:00</lastmod>
+  </url><url>
+    <loc>https://grapheneloop.github.io/interservice-communication-patterns/remort-procedure-call/</loc>
+    <lastmod>2018-12-08T15:26:15+00:00</lastmod>
+  </url><url>
+    <loc>https://grapheneloop.github.io/interservice-communication-patterns/websocket/</loc>
+    <lastmod>2018-12-08T15:26:15+00:00</lastmod>
+  </url><url>
+    <loc>https://grapheneloop.github.io/interservice-communication-patterns/direct-database-access/</loc>
     <lastmod>2018-12-08T15:26:15+00:00</lastmod>
   </url><url>
     <loc>https://grapheneloop.github.io/sample/markdown-syntax/</loc>
@@ -34,9 +73,6 @@
   </url><url>
     <loc>https://grapheneloop.github.io/posts/hello_world/</loc>
     <lastmod>2017-10-17T14:00:45+00:00</lastmod>
-  </url><url>
-    <loc>https://grapheneloop.github.io/security/configuration/</loc>
-    <lastmod>2019-10-26T15:26:15+00:00</lastmod>
   </url><url>
     <loc>https://grapheneloop.github.io/security/screenshot/</loc>
     <lastmod>2019-10-26T15:26:15+00:00</lastmod>

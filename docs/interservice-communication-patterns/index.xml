@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Interservice Communication Patterns on Graphene Loop</title>
+    <link>https://grapheneloop.github.io/interservice-communication-patterns/</link>
+    <description>Recent content in Interservice Communication Patterns on Graphene Loop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 03 Oct 2023 15:26:15 +0000</lastBuildDate><atom:link href="https://grapheneloop.github.io/interservice-communication-patterns/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Synchronous Communication</title>
+      <link>https://grapheneloop.github.io/interservice-communication-patterns/synch/</link>
+      <pubDate>Tue, 03 Oct 2023 15:26:15 +0000</pubDate>
+      
+      <guid>https://grapheneloop.github.io/interservice-communication-patterns/synch/</guid>
+      <description>Synchronous Communication between two systems means that the request will wait for response.
+Advantages: Disadvantages: HTTP/RESTful APIs gRPC GraphQL </description>
+    </item>
+    
+    <item>
+      <title>Asynchronous Communication</title>
+      <link>https://grapheneloop.github.io/interservice-communication-patterns/async/</link>
+      <pubDate>Tue, 03 Oct 2023 15:26:15 +0000</pubDate>
+      
+      <guid>https://grapheneloop.github.io/interservice-communication-patterns/async/</guid>
+      <description>Basis of Wifi Network Security Media Access Control (MAC) Address ifconfig you may see:
+eth0: A physical network card used for LAN Network used in wired connection. wlan0: A physical network adapter used for wireless connection. lo: loopback virtual network interface which lets you use the localhost. This will not have a MAC address. Note: You may see different names for the interface names. The following assumes the name of wireless interface as wlan0 for simplicity &amp;amp; clarity.</description>
+    </item>
+    
+    <item>
+      <title>Support for Multiple Communication Patterns</title>
+      <link>https://grapheneloop.github.io/interservice-communication-patterns/synch-and-async/</link>
+      <pubDate>Tue, 03 Oct 2023 15:26:15 +0000</pubDate>
+      
+      <guid>https://grapheneloop.github.io/interservice-communication-patterns/synch-and-async/</guid>
+      <description>Synchronous And Asychrnous with Messaging Queues Synchronous And Asychrnous using HTTP/RESTful APIs </description>
+    </item>
+    
+    <item>
+      <title>Mediator Pattern</title>
+      <link>https://grapheneloop.github.io/interservice-communication-patterns/mediator/</link>
+      <pubDate>Tue, 03 Oct 2023 15:26:15 +0000</pubDate>
+      
+      <guid>https://grapheneloop.github.io/interservice-communication-patterns/mediator/</guid>
+      <description>Basis of Wifi Network Security Media Access Control (MAC) Address ifconfig you may see:
+eth0: A physical network card used for LAN Network used in wired connection. wlan0: A physical network adapter used for wireless connection. lo: loopback virtual network interface which lets you use the localhost. This will not have a MAC address. Note: You may see different names for the interface names. The following assumes the name of wireless interface as wlan0 for simplicity &amp;amp; clarity.</description>
+    </item>
+    
+    <item>
+      <title>Intermediary Pattern</title>
+      <link>https://grapheneloop.github.io/interservice-communication-patterns/intermediary/</link>
+      <pubDate>Tue, 03 Oct 2023 15:26:15 +0000</pubDate>
+      
+      <guid>https://grapheneloop.github.io/interservice-communication-patterns/intermediary/</guid>
+      <description>Basis of Wifi Network Security Media Access Control (MAC) Address ifconfig you may see:
+eth0: A physical network card used for LAN Network used in wired connection. wlan0: A physical network adapter used for wireless connection. lo: loopback virtual network interface which lets you use the localhost. This will not have a MAC address. Note: You may see different names for the interface names. The following assumes the name of wireless interface as wlan0 for simplicity &amp;amp; clarity.</description>
+    </item>
+    
+    <item>
+      <title>Pub-Sub Model</title>
+      <link>https://grapheneloop.github.io/interservice-communication-patterns/pub-sub/</link>
+      <pubDate>Tue, 03 Oct 2023 15:26:15 +0000</pubDate>
+      
+      <guid>https://grapheneloop.github.io/interservice-communication-patterns/pub-sub/</guid>
+      <description>Basis of Wifi Network Security Media Access Control (MAC) Address ifconfig you may see:
+eth0: A physical network card used for LAN Network used in wired connection. wlan0: A physical network adapter used for wireless connection. lo: loopback virtual network interface which lets you use the localhost. This will not have a MAC address. Note: You may see different names for the interface names. The following assumes the name of wireless interface as wlan0 for simplicity &amp;amp; clarity.</description>
+    </item>
+    
+    <item>
+      <title>Callback</title>
+      <link>https://grapheneloop.github.io/interservice-communication-patterns/callback/</link>
+      <pubDate>Tue, 03 Oct 2023 15:26:15 +0000</pubDate>
+      
+      <guid>https://grapheneloop.github.io/interservice-communication-patterns/callback/</guid>
+      <description>Basis of Wifi Network Security Media Access Control (MAC) Address ifconfig you may see:
+eth0: A physical network card used for LAN Network used in wired connection. wlan0: A physical network adapter used for wireless connection. lo: loopback virtual network interface which lets you use the localhost. This will not have a MAC address. Note: You may see different names for the interface names. The following assumes the name of wireless interface as wlan0 for simplicity &amp;amp; clarity.</description>
+    </item>
+    
+    <item>
+      <title>Event Sourcing &amp; CQRS</title>
+      <link>https://grapheneloop.github.io/interservice-communication-patterns/event-sourcing-and-cqrs/</link>
+      <pubDate>Tue, 03 Oct 2023 15:26:15 +0000</pubDate>
+      
+      <guid>https://grapheneloop.github.io/interservice-communication-patterns/event-sourcing-and-cqrs/</guid>
+      <description>Basis of Wifi Network Security Media Access Control (MAC) Address ifconfig you may see:
+eth0: A physical network card used for LAN Network used in wired connection. wlan0: A physical network adapter used for wireless connection. lo: loopback virtual network interface which lets you use the localhost. This will not have a MAC address. Note: You may see different names for the interface names. The following assumes the name of wireless interface as wlan0 for simplicity &amp;amp; clarity.</description>
+    </item>
+    
+    <item>
+      <title>Remote Procedure Call</title>
+      <link>https://grapheneloop.github.io/interservice-communication-patterns/remort-procedure-call/</link>
+      <pubDate>Tue, 03 Oct 2023 15:26:15 +0000</pubDate>
+      
+      <guid>https://grapheneloop.github.io/interservice-communication-patterns/remort-procedure-call/</guid>
+      <description>Basis of Wifi Network Security Media Access Control (MAC) Address ifconfig you may see:
+eth0: A physical network card used for LAN Network used in wired connection. wlan0: A physical network adapter used for wireless connection. lo: loopback virtual network interface which lets you use the localhost. This will not have a MAC address. Note: You may see different names for the interface names. The following assumes the name of wireless interface as wlan0 for simplicity &amp;amp; clarity.</description>
+    </item>
+    
+    <item>
+      <title>Websocket</title>
+      <link>https://grapheneloop.github.io/interservice-communication-patterns/websocket/</link>
+      <pubDate>Tue, 03 Oct 2023 15:26:15 +0000</pubDate>
+      
+      <guid>https://grapheneloop.github.io/interservice-communication-patterns/websocket/</guid>
+      <description>HTTP/RESTful APIs gRPC GraphQL </description>
+    </item>
+    
+    <item>
+      <title>Direct Database Access</title>
+      <link>https://grapheneloop.github.io/interservice-communication-patterns/direct-database-access/</link>
+      <pubDate>Tue, 03 Oct 2023 15:26:15 +0000</pubDate>
+      
+      <guid>https://grapheneloop.github.io/interservice-communication-patterns/direct-database-access/</guid>
+      <description>HTTP/RESTful APIs gRPC GraphQL </description>
+    </item>
+    
+  </channel>
+</rss>

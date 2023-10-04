@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Security on Hugo Techdoc Theme</title>
+    <title>Security on Graphene Loop</title>
     <link>https://grapheneloop.github.io/security/</link>
-    <description>Recent content in Security on Hugo Techdoc Theme</description>
+    <description>Recent content in Security on Graphene Loop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 03 Oct 2023 15:26:15 +0000</lastBuildDate><atom:link href="https://grapheneloop.github.io/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wifi Security Basics</title>
+      <link>https://grapheneloop.github.io/security/wifi-security-basics/</link>
+      <pubDate>Tue, 03 Oct 2023 15:26:15 +0000</pubDate>
+      
+      <guid>https://grapheneloop.github.io/security/wifi-security-basics/</guid>
+      <description>Basis of Wifi Network Security Media Access Control (MAC) Address ifconfig you may see:
+eth0: A physical network card used for LAN Network used in wired connection. wlan0: A physical network adapter used for wireless connection. lo: loopback virtual network interface which lets you use the localhost. This will not have a MAC address. Note: You may see different names for the interface names. The following assumes the name of wireless interface as wlan0 for simplicity &amp;amp; clarity.</description>
+    </item>
+    
     <item>
       <title>Installation</title>
       <link>https://grapheneloop.github.io/security/installation/</link>
@@ -17,17 +27,6 @@
 cd your_project git submodule add https://github.com/thingsym/hugo-theme-techdoc.git themes/hugo-theme-techdoc For more information read the Hugo documentation.
 Or download Hugo theme on your project If you have git installed, you can do the following at the command-line-interface within your project directory.
 cd your_project/themes git clone https://github.</description>
-    </item>
-    
-    <item>
-      <title>Configuration</title>
-      <link>https://grapheneloop.github.io/security/configuration/</link>
-      <pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate>
-      
-      <guid>https://grapheneloop.github.io/security/configuration/</guid>
-      <description>You may specify options in config.toml (or config.yaml/config.json) of your site to make use of this theme’s features.
-For an example of config.toml, see config.toml in exampleSite.
-Params # Source Code repository section description = &amp;quot;put your description&amp;quot; github_repository = &amp;quot;https://github.com/thingsym/hugo-theme-techdoc&amp;quot; version = &amp;quot;1.0.0&amp;quot; # Documentation repository section # documentation repository (set edit link to documentation repository) github_doc_repository = &amp;quot;https://github.com/thingsym/hugo-theme-techdoc&amp;quot; github_doc_repository_path = &amp;quot;&amp;quot; github_doc_repository_branch = &amp;quot;master&amp;quot; # Analytic section google_analytics_id = &amp;quot;&amp;quot; # Your Google Analytics tracking id tag_manager_container_id = &amp;quot;&amp;quot; # Your Google Tag Manager container id google_site_verification = &amp;quot;&amp;quot; # Your Google Site Verification for Search Console # Open Graph and Twitter Cards settings section # Open Graph settings for each page are set on the front matter.</description>
     </item>
     
     <item>

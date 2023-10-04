@@ -2,7 +2,7 @@ baseURL = "https://grapheneloop.github.io/"
 
 languageCode = "en-us"
 DefaultContentLanguage = "en"
-title = "Hugo Techdoc Theme"
+title = "Graphene Loop"
 
 hasCJKLanguage = true
 metaDataFormat = "yaml"
@@ -40,7 +40,7 @@ enableMissingTranslationPlaceholders = false
     # Theme color
     # See color value reference https://developer.mozilla.org/en-US/docs/Web/CSS/color
     custom_font_color = ""
-    custom_background_color = "green"
+    custom_background_color = "turquoise"
 
     # Documentation Menu section
     # Menu style settings
