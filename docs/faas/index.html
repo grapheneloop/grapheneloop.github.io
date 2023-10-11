@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Security &lt;WIP&gt; - Graphene Loop</title>
+<meta name="description" content="Security">
+<meta name="generator" content="Hugo 0.113.0">
+<link href="https://grapheneloop.github.io//index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://grapheneloop.github.io/faas/">
+<link rel="stylesheet" href="https://grapheneloop.github.io/css/theme.min.css">
+<link rel="stylesheet" href="https://grapheneloop.github.io/css/chroma.min.css">
+<script defer src="https://grapheneloop.github.io//js/fontawesome6/all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha256-4XodgW4TwIJuDtf+v6vDJ39FVxI0veC/kSCCmnFp7ck=" crossorigin="anonymous"></script>
+<script src="https://grapheneloop.github.io/js/bundle.js"></script><style>
+:root {--custom-background-color: darkblue;}
+</style>
+<meta property="og:title" content="Security &lt;WIP&gt;" />
+<meta property="og:description" content="Security" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://grapheneloop.github.io/faas/" /><meta property="og:image" content="https://grapheneloop.github.io/images/og-image.png"/><meta property="og:site_name" content="Hugo Techdoc Theme" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://grapheneloop.github.io/images/og-image.png"/>
+
+<meta name="twitter:title" content="Security &lt;WIP&gt;"/>
+<meta name="twitter:description" content="Security"/>
+<meta itemprop="name" content="Security &lt;WIP&gt;">
+<meta itemprop="description" content="Security"></head>
+<body><div class="container"><header>
+<h1>Graphene Loop</h1>&nbsp;&nbsp;<a href="https://github.com/thingsym/hugo-theme-techdoc"><i class="fa fa-futbol" style="color:aqua;font-size: 24px;"></i></a>
+<p class="description">put your description</p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li id="home" class=""><a href="/"><i class='fa fa-heart'></i>&nbsp;Home</a></li>
+<li id="twitter" class="twitter-menu-item"><a href="https://twitter.com/thingsym"><b>pre!</b> Twitter <b>post!</b></a></li>
+<li class=""><a href="/about/">About Hugo</a></li></ul>
+</nav>
+</div>
+
+<div class="content-container">
+<main><h1>Security &lt;WIP&gt;</h1><h1 id="introduction">Introduction</h1>
+<p>A function is an independent sequence of actions that can be reused and operates with a level of abstraction. It has the capability to accept input parameters and potentially provide an output. Each function consists of an execution process, a triggering mechanism, zero or more input parameters, and typically zero or one output result. When executed, it can either complete successfully or encounter errors and fail; with the option of including an exception handling mechanism. These attributes apply universally to any function or Function as a Service (FaaS) implementations.</p>
+<h1 id="some-of-the-qualities-of-a-function">Some of the qualities of a function:</h1>
+<h2 id="single-responsibility-principle">Single Responsibility Principle</h2>
+<p>An effective function should perform a singular, well-defined task, which encourages the principle of modularity.</p>
+<h2 id="statelessnessno-side-effects">Statelessness/No Side Effects</h2>
+<p>A well-constructed function should be devoid of state, meaning it does not alter global variables or induce unintended side effects. These functions encapsulate their behavior and maintain the integrity of the program&rsquo;s state, allowing for externalization of state, if needed.</p>
+<h2 id="testability">Testability</h2>
+<p>A function should be capable of being tested both in isolation and within the context of its specific sub-domain.</p>
+<h1 id="types-of-functions">Types of functions:</h1>
+<h2 id="modularity-and-reusability">Modularity and Reusability:</h2>
+<p>A function should be designed for reusability. However, when considering a Function as a Service (FaaS) in a Microservices ecosystem, each instance of the function should be associated with a specific Bounded Context within one of the subdomains. For instance, the same AWS Lambda function can serve multiple subdomains and may be triggered from various trigger points.</p>
+<h2 id="deterministic-functions">Deterministic Functions</h2>
+<p>Deterministic function is one which returns same output for a given input. This makes it are more predictable and more easily testable. Deterministic functions however can cause side effects.</p>
+<h2 id="pure-functions">Pure Functions</h2>
+<p>Similar to deterministic functions, but additionally <strong>idempotent</strong> - i.e.can be called any number of times without causing any side effects. e.g. of a side effect is Payment made on a purchase.</p>
+<h2 id="stateful-and-stateless-functions">Stateful and Stateless Functions</h2>
+<p>It is possible to alter the internal state of a function, e.g. by means of changing a global variable from within the function itself. While this can be appropriate for some specific use cases, like tracking whether the function was invoked before or FaaS instance is a fresh instance from pool or cloned from another instance etc.., it can become problematic and difficult to debug in most usecases especially in multi-threaded runtime environments or in a Function as a Service (FaaS) context where state is expected to be shared across multiple instantiations.</p>
+<h1 id="advantages-of-faas">Advantages of FaaS:</h1>
+<h2 id="serverless">Serverless:</h2>
+<p>Most FaaS are design with Server Abstraction in mind. Some providers even call it <em>Serverless</em>-ness.</p>
+<h2 id="design-to-scale">Design to Scale</h2>
+<p>FaaS functions are almost always designed to scale. So depending on the provider different strategies such as cloning of function instances may be adopted to quickly meet the scalability needs. Hence it becomes necessary to design function instances to not behave differently based on whether it&rsquo;s a newly created instance, an instance reused from a pool or even a cloned instance.</p>
+<p>Depending on the environment this however may introduce new problems to solve e.g. order of processing, cold start.</p>
+<h1 id="problemssolutions---patternsbestpractices">Problems/Solutions - Patterns/BestPractices:</h1>
+<h2 id="pay-per-use">Pay Per Use:</h2>
+<p>The big advantage of using FaaS by popular cloud service providers is the Pay Per Use. We only pay for aspects such as number of invocations, Time and Resources such as reserved RAM and CPU allocated etc. This introduces a whole set of problems such as Cold start, abrupt termination due to function execution settings or Service provider&rsquo;s enforced time limits.</p>
+<h2 id="stateless-vs-stateful">Stateless v/s Stateful:</h2>
+<p>Functions are designed to scale. As mentioned before providers may follow different strategies to achieve this. In FaaS environments, care should be taken when using mutable shared state to avoid concurrency issues, race conditions, and unintended side effects. While it&rsquo;s often clearer and safer to design functions to be stateless there are often need to maintain state like when state needs to shared across invocations. It&rsquo;s better to offload or manage state externally (such as a database or as provided by the Managed Service e.g. Azure Durable Functions).
+A Function design may choose to externalize its state into an RDBMS, but now if the database operation has to make use of a connection pool it may need to use an maintained externally. Some Service Providers have solved this problem through inherent solutions e.g. RDS proxy in case of AWS Lambdas.</p>
+<h2 id="problem-of-long-running-process">Problem of Long running process:</h2>
+<p>FaaS Functions are generally</p>
+<h2 id="cold-start-vs-warm-starts">Cold Start v/s Warm Starts:</h2>
+<p>One of the problems with Pay-Per-Use is to an Function instance is made available (either by creating new or pulling one from pool of instances) only when there is an actual trigger. This is in contrary to a long running Service. E.g. a kubernetes pod may be running all the time actively waiting (or based on a scheduled task) for a request to come, it may designed to scale up based on thresholds set on CPU usage or RPS. The downside of the latter approach is it takes a minimum amount of compute (and thus cost) to keep the service running irrespective of if it is serving a request or not. By default it generally easier and quicker to scale (↑ &amp; ↓) a FaaS function compared to the scaling a service based on thresholds.
+This flexibility comes at the cost of Cold start as the default behaviour. Functions are generally slower at serving the first request or request after a period of inactivity. Function container must be started and code loaded, connection established, repartitioning due to consumer group etc. need to be done all may contribute to Cold Start.</p>
+<p>Solution to this problem is Warm start. Warm function have everything ready to serve a request very much like a Service actively waiting to serve a request.</p>
+<p>A hybrid approach is also possible with some FaaS frameworks where a function thats terminated is made available to serve subsequent request if it is within the expiry of the instance. This could however lead wastage of  limited resources (e.g. a DB Connection) are being reserved to these terminated instances even which they are not being actively used.</p>
+<h2 id="committing-offsets-in-case-of-event-brokers">Committing offsets in case of Event Brokers:</h2>
+<h2 id="consumer-group">Consumer group</h2>
+<div class="edit-meta">
+Last updated on 8 Oct 2018
+
+
+<br>
+Published on 8 Oct 2018
+<br><a href="https://github.com/thingsym/hugo-theme-techdoc/edit/master/FaaS/_index.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="https://grapheneloop.github.io/" title="Home title"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Home title</a>
+<a class="nav nav-next" href="https://grapheneloop.github.io/interservice-communication-patterns/" title="Interservice Communication Patterns">Next - Interservice Communication Patterns <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="open-menu">
+<ul>
+<li class=""><a href="https://grapheneloop.github.io/">Home</a></li>
+
+<li class=" active"><a href="https://grapheneloop.github.io/faas/">Security &lt;WIP&gt;</a>
+  
+</li>
+
+<li class=""><a href="https://grapheneloop.github.io/interservice-communication-patterns/">Interservice Communication Patterns</a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://grapheneloop.github.io/interservice-communication-patterns/synch/">Synchronous Communication</a></li>
+<li class=""><a href="https://grapheneloop.github.io/interservice-communication-patterns/async/">Asynchronous Communication</a></li>
+<li class=""><a href="https://grapheneloop.github.io/interservice-communication-patterns/synch-and-async/">Support for Multiple Communication Patterns</a></li>
+<li class=""><a href="https://grapheneloop.github.io/interservice-communication-patterns/mediator/">Mediator Pattern</a></li>
+<li class=""><a href="https://grapheneloop.github.io/interservice-communication-patterns/intermediary/">Intermediary Pattern</a></li>
+<li class=""><a href="https://grapheneloop.github.io/interservice-communication-patterns/pub-sub/">Pub-Sub Model</a></li>
+<li class=""><a href="https://grapheneloop.github.io/interservice-communication-patterns/callback/">Callback</a></li>
+<li class=""><a href="https://grapheneloop.github.io/interservice-communication-patterns/event-sourcing-and-cqrs/">Event Sourcing &amp; CQRS</a></li>
+<li class=""><a href="https://grapheneloop.github.io/interservice-communication-patterns/remort-procedure-call/">Remote Procedure Call</a></li>
+<li class=""><a href="https://grapheneloop.github.io/interservice-communication-patterns/websocket/">Websocket</a></li>
+<li class=""><a href="https://grapheneloop.github.io/interservice-communication-patterns/direct-database-access/">Direct Database Access</a></li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

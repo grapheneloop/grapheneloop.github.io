@@ -18,16 +18,6 @@ Advantages: Disadvantages: HTTP/RESTful APIs gRPC GraphQL </description>
     </item>
     
     <item>
-      <title>Wifi Security Basics</title>
-      <link>https://grapheneloop.github.io/security/wifi-security-basics/</link>
-      <pubDate>Tue, 03 Oct 2023 15:26:15 +0000</pubDate>
-      
-      <guid>https://grapheneloop.github.io/security/wifi-security-basics/</guid>
-      <description>Basis of Wifi Network Security Media Access Control (MAC) Address ifconfig you may see:
-eth0: A physical network card used for LAN Network used in wired connection. wlan0: A physical network adapter used for wireless connection. lo: loopback virtual network interface which lets you use the localhost. This will not have a MAC address. Note: You may see different names for the interface names. The following assumes the name of wireless interface as wlan0 for simplicity &amp;amp; clarity.</description>
-    </item>
-    
-    <item>
       <title>Asynchronous Communication</title>
       <link>https://grapheneloop.github.io/interservice-communication-patterns/async/</link>
       <pubDate>Tue, 03 Oct 2023 15:26:15 +0000</pubDate>
@@ -125,33 +115,12 @@ eth0: A physical network card used for LAN Network used in wired connection. wla
     </item>
     
     <item>
-      <title>Installation</title>
-      <link>https://grapheneloop.github.io/security/installation/</link>
-      <pubDate>Tue, 17 Oct 2017 15:26:15 +0000</pubDate>
-      
-      <guid>https://grapheneloop.github.io/security/installation/</guid>
-      <description>Install Hugo theme on your project If you have git installed, you can include hugo-theme-techdoc repository into your core repository as submodule using git submodule within your project directory.
-cd your_project git submodule add https://github.com/thingsym/hugo-theme-techdoc.git themes/hugo-theme-techdoc For more information read the Hugo documentation.
-Or download Hugo theme on your project If you have git installed, you can do the following at the command-line-interface within your project directory.
-cd your_project/themes git clone https://github.</description>
-    </item>
-    
-    <item>
       <title>Hello world!</title>
       <link>https://grapheneloop.github.io/hello_world/</link>
       <pubDate>Tue, 17 Oct 2017 14:00:45 +0000</pubDate>
       
       <guid>https://grapheneloop.github.io/hello_world/</guid>
       <description>Hello world!</description>
-    </item>
-    
-    <item>
-      <title>Screenshot</title>
-      <link>https://grapheneloop.github.io/security/screenshot/</link>
-      <pubDate>Sat, 26 Oct 2019 15:26:15 +0000</pubDate>
-      
-      <guid>https://grapheneloop.github.io/security/screenshot/</guid>
-      <description>Theme color Menu style Open Menu Slide Menu Edit link </description>
     </item>
     
     <item>
