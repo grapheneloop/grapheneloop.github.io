@@ -1,11 +1,11 @@
 ---
-title: "Security <WIP>"
+title: "Function as a Service (FaaS)"
 date: 2023-10-08T15:26:15Z
 lastmod: 2018-10-08T15:26:15Z
 publishdate: 2018-10-08T15:26:15Z
 draft: false
 weight: 1
-description: Security
+description: Function as a Service (FaaS) 
 TableOfContents: true
 ---
 
@@ -53,4 +53,4 @@ Solution to this problem is Warm start. Warm function have everything ready to s
 A hybrid approach is also possible with some FaaS frameworks where a function thats terminated is made available to serve subsequent request if it is within the expiry of the instance. This could however lead wastage of  limited resources (e.g. a DB Connection) are being reserved to these terminated instances even which they are not being actively used.
 ## Committing offsets in case of Event Brokers:
 ## Consumer group 
-
+## Orchestration & Choreography
