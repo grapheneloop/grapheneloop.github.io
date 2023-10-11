@@ -54,3 +54,4 @@ A hybrid approach is also possible with some FaaS frameworks where a function th
 ## Committing offsets in case of Event Brokers:
 ## Consumer group 
 ## Orchestration & Choreography
+![AWS example](./FaaS%20Choreography%20&%20Orchestration.drawio.svg)
