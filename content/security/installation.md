@@ -11,7 +11,7 @@ If you have git installed, you can include hugo-theme-techdoc repository into yo
 
 ```
 cd your_project
-git submodule add https://github.com/thingsym/hugo-theme-techdoc.git themes/hugo-theme-techdoc
+git submodule add https://grapheneloop.github.io/.git themes/hugo-theme-techdoc
 ```
 
 For more information read [the Hugo documentation](https://gohugo.io/getting-started/quick-start/).
@@ -22,14 +22,14 @@ If you have git installed, you can do the following at the command-line-interfac
 
 ```
 cd your_project/themes
-git clone https://github.com/thingsym/hugo-theme-techdoc.git
+git clone https://grapheneloop.github.io/.git
 ```
 
 ## Configure
 
 You may specify options in config.toml (or config.yaml/config.json) of your site to make use of this theme's features.
 
-For an example of `config.toml`, see [config.toml](https://github.com/thingsym/hugo-theme-techdoc/blob/master/exampleSite/config.toml) in exampleSite.
+For an example of `config.toml`, see [config.toml](https://grapheneloop.github.io//blob/master/exampleSite/config.toml) in exampleSite.
 
 See [the Configuration documentation](../configuration/).
 
