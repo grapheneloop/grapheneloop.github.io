@@ -5,6 +5,9 @@
     <loc>https://grapheneloop.github.io/faas/</loc>
     <lastmod>2018-10-08T15:26:15+00:00</lastmod>
   </url><url>
+    <loc>https://grapheneloop.github.io/ordering-in-distributed-systems/</loc>
+    <lastmod>2018-10-08T15:26:15+00:00</lastmod>
+  </url><url>
     <loc>https://grapheneloop.github.io/interservice-communication-patterns/</loc>
     <lastmod>2018-12-08T15:26:15+00:00</lastmod>
   </url><url>
@@ -40,9 +43,6 @@
   </url><url>
     <loc>https://grapheneloop.github.io/interservice-communication-patterns/direct-database-access/</loc>
     <lastmod>2018-12-08T15:26:15+00:00</lastmod>
-  </url><url>
-    <loc>https://grapheneloop.github.io/hello_world/</loc>
-    <lastmod>2017-10-17T14:00:45+00:00</lastmod>
   </url><url>
     <loc>https://grapheneloop.github.io/</loc>
     <lastmod>2019-10-26T15:26:15+00:00</lastmod>

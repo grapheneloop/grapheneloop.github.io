@@ -3,11 +3,11 @@
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>Function as a Service (FaaS) - Graphene Loop</title>
-<meta name="description" content="Function as a Service (FaaS)">
+<title>Ordering - Graphene Loop</title>
+<meta name="description" content="Ordering">
 <meta name="generator" content="Hugo 0.113.0">
 <link href="https://grapheneloop.github.io//index.xml" rel="alternate" type="application/rss+xml">
-<link rel="canonical" href="https://grapheneloop.github.io/faas/">
+<link rel="canonical" href="https://grapheneloop.github.io/ordering-in-distributed-systems/">
 <link rel="stylesheet" href="https://grapheneloop.github.io/css/theme.min.css">
 <link rel="stylesheet" href="https://grapheneloop.github.io/css/chroma.min.css">
 <script defer src="https://grapheneloop.github.io//js/fontawesome6/all.min.js"></script>
@@ -17,17 +17,17 @@
 <script src="https://grapheneloop.github.io/js/bundle.js"></script><style>
 :root {--custom-background-color: darkblue;}
 </style>
-<meta property="og:title" content="Function as a Service (FaaS)" />
-<meta property="og:description" content="Function as a Service (FaaS)" />
+<meta property="og:title" content="Ordering" />
+<meta property="og:description" content="Ordering" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://grapheneloop.github.io/faas/" /><meta property="og:image" content="https://grapheneloop.github.io/images/og-image.png"/><meta property="og:site_name" content="Hugo Techdoc Theme" />
+<meta property="og:url" content="https://grapheneloop.github.io/ordering-in-distributed-systems/" /><meta property="og:image" content="https://grapheneloop.github.io/images/og-image.png"/><meta property="og:site_name" content="Hugo Techdoc Theme" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://grapheneloop.github.io/images/og-image.png"/>
 
-<meta name="twitter:title" content="Function as a Service (FaaS)"/>
-<meta name="twitter:description" content="Function as a Service (FaaS)"/>
-<meta itemprop="name" content="Function as a Service (FaaS)">
-<meta itemprop="description" content="Function as a Service (FaaS)"></head>
+<meta name="twitter:title" content="Ordering"/>
+<meta name="twitter:description" content="Ordering"/>
+<meta itemprop="name" content="Ordering">
+<meta itemprop="description" content="Ordering"></head>
 <body><div class="container"><header>
 <h1>Graphene Loop</h1>&nbsp;&nbsp;<a href="https://github.com/thingsym/hugo-theme-techdoc"><i class="fa fa-futbol" style="color:aqua;font-size: 24px;"></i></a>
 <p class="description">put your description</p>
@@ -43,7 +43,7 @@
 </div>
 
 <div class="content-container">
-<main><h1>Function as a Service (FaaS)</h1><h1 id="introduction">Introduction</h1>
+<main><h1>Ordering</h1><h1 id="introduction">Introduction</h1>
 <p>A function is an independent sequence of actions that can be reused and operates with a level of abstraction. It has the capability to accept input parameters and potentially provide an output. Each function consists of an execution process, a triggering mechanism, zero or more input parameters, and typically zero or one output result. When executed, it can either complete successfully or encounter errors and fail; with the option of including an exception handling mechanism. These attributes apply universally to any function or Function as a Service (FaaS) implementations.</p>
 <h1 id="some-of-the-qualities-of-a-function">Some of the qualities of a function:</h1>
 <h2 id="single-responsibility-principle">Single Responsibility Principle</h2>
@@ -66,6 +66,12 @@
 <h2 id="built-to-scale">Built to Scale</h2>
 <p>FaaS functions are almost always designed to scale by cloning <a href="https://akfpartners.com/growth-blog/scale-cube">Y-Axis Scaling</a>. So depending on the provider different strategies such as cloning of function instances may be adopted to quickly meet the scalability needs. Hence it becomes necessary to design function instances to not behave differently based on whether it&rsquo;s a newly created instance, an instance reused from a pool or even a cloned instance.
 Depending on the environment this however may introduce new problems to solve e.g. order of processing, cold start.</p>
+<h3 id="problem-of-ordering">Problem of Ordering</h3>
+<h4 id="use-of-event-broker">Use of Event Broker</h4>
+<p>If ordering is important particularly with events one might need to resort to Channels such as an event broker (as against a Message Broker). Event Broker guarantees order at a shard or partition level; and since the number of consumers &lt;= number of partitions(other words one consumer can read from multiple shards but the reverse isn&rsquo;t possible), this can give some level of guarantee.</p>
+<h4 id="use-of-fifo-message-channel">Use of FIFO Message Channel</h4>
+<p>FIFO Queues maintain order of event based on a message Group Id (similar to an Event Broker where a partition Id is used) and one when one message is acknowledged the next message in the same group is served. This is another strategy to guarantee ordering.</p>
+<p>However the above can limit scalability particularly within the same Message Group or Partition. The solution is to use algorithms for <a href="/ordering-in-distributed-systems/">Event Ordering in Distributed Systems</a> or park the events in a datastore and act upon an event when the dependant tasks are completed.</p>
 <h2 id="functions-as-reusable-and-modular-set-of-operations">Functions as Reusable and Modular set of operations</h2>
 <p>Functions are sometimes written highly with <a href="#modularity-and-reusability">Modularity and Reusability</a> in mind. This would mean they will find a fitment across different subdomains and membership with multiple bounded contexts. This inturn means that the function would have to remain highly granular and sometimes when awareness of the usecases would have to be introduce into a function (:rofl:	- by means of an evil if conditions), things quickly get out of hand.</p>
 <p>If the function maintains the state externally (in an RDBMS for example), think in terms of datastore behind the function. The datastore must not be accessible outside any external components in any of the bounded context.
@@ -102,8 +108,8 @@ Last updated on 8 Oct 2018
 
 <br>
 Published on 8 Oct 2018
-<br><a href="https://github.com/thingsym/hugo-theme-techdoc/edit/master/faas/_index.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="https://grapheneloop.github.io/" title="Home title"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Home title</a>
-<a class="nav nav-next" href="https://grapheneloop.github.io/ordering-in-distributed-systems/" title="Ordering">Next - Ordering <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+<br><a href="https://github.com/thingsym/hugo-theme-techdoc/edit/master/ordering-in-distributed-systems/_index.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="https://grapheneloop.github.io/faas/" title="Function as a Service (FaaS)"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Function as a Service (FaaS)</a>
+<a class="nav nav-next" href="https://grapheneloop.github.io/interservice-communication-patterns/" title="Interservice Communication Patterns">Next - Interservice Communication Patterns <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
 </nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
 </footer>
 </main>
@@ -113,11 +119,11 @@ Published on 8 Oct 2018
 <ul>
 <li class=""><a href="https://grapheneloop.github.io/">Home</a></li>
 
-<li class=" active"><a href="https://grapheneloop.github.io/faas/">Function as a Service (FaaS)</a>
+<li class=""><a href="https://grapheneloop.github.io/faas/">Function as a Service (FaaS)</a>
   
 </li>
 
-<li class=""><a href="https://grapheneloop.github.io/ordering-in-distributed-systems/">Ordering</a>
+<li class=" active"><a href="https://grapheneloop.github.io/ordering-in-distributed-systems/">Ordering</a>
   
 </li>
 

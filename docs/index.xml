@@ -115,15 +115,6 @@ eth0: A physical network card used for LAN Network used in wired connection. wla
     </item>
     
     <item>
-      <title>Hello world!</title>
-      <link>https://grapheneloop.github.io/hello_world/</link>
-      <pubDate>Tue, 17 Oct 2017 14:00:45 +0000</pubDate>
-      
-      <guid>https://grapheneloop.github.io/hello_world/</guid>
-      <description>Hello world!</description>
-    </item>
-    
-    <item>
       <title>About Hugo</title>
       <link>https://grapheneloop.github.io/about/</link>
       <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
