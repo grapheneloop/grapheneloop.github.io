@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Function as a Service (FaaS) on Graphene Loop</title>
-    <link>https://grapheneloop.github.io/faas/</link>
+    <link>http://localhost:1313/faas/</link>
     <description>Recent content in Function as a Service (FaaS) on Graphene Loop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Oct 2023 15:26:15 +0000</lastBuildDate><atom:link href="https://grapheneloop.github.io/faas/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Oct 2023 15:26:15 +0000</lastBuildDate><atom:link href="http://localhost:1313/faas/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

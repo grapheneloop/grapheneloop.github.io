@@ -34,8 +34,15 @@ Working with Functions as a Service (FaaS) offers various advantages, but it als
 ## Built to Scale
 FaaS functions are almost always designed to scale by cloning [Y-Axis Scaling](https://akfpartners.com/growth-blog/scale-cube). So depending on the provider different strategies such as cloning of function instances may be adopted to quickly meet the scalability needs. Hence it becomes necessary to design function instances to not behave differently based on whether it's a newly created instance, an instance reused from a pool or even a cloned instance.
 Depending on the environment this however may introduce new problems to solve e.g. order of processing, cold start.
+### Problem of Ordering
+#### Use of Event Broker
+If ordering is important particularly with events one might need to resort to Channels such as an event broker (as against a Message Broker). Event Broker guarantees order at a shard or partition level; and since the number of consumers <= number of partitions(other words one consumer can read from multiple shards but the reverse isn't possible), this can give some level of guarantee. 
+#### Use of FIFO Message Channel
+FIFO Queues maintain order of event based on a message Group Id (similar to an Event Broker where a partition Id is used) and one when one message is acknowledged the next message in the same group is served. This is another strategy to guarantee ordering.
+
+However the above can limit scalability particularly within the same Message Group or Partition. The solution is to use algorithms for [Event Ordering in Distributed Systems](/ordering-in-distributed-systems/) or park the events in a datastore and act upon an event when the dependant tasks are completed.
 ## Functions as Reusable and Modular set of operations
-Functions are sometimes written highly with [Modularity and Reusability](#modularity-and-reusability) in mind. This would mean they will find a fitment across different subdomains and membership with multiple bounded contexts. This inturn means that the function would have to remain highly granular and sometimes when awareness of the usecases would have to be introduce into a function (:rofl:	- by means of an evil if conditions), things quickly get out of hand. 
+Functions are sometimes written highly with [Modularity and Reusability](#modularity-and-reusability) in mind. This would mean they will find a fitment across different subdomains and membership with multiple bounded contexts. This inturn means that the function would have to remain highly granular and sometimes when awareness of the usecases would have to be introduce into a function (easily by means of an if condition...&#128520;), things quickly get out of hand. 
 
 If the function maintains the state externally (in an RDBMS for example), think in terms of datastore behind the function. The datastore must not be accessible outside any external components in any of the bounded context.
 As much as possible keep a copy of the function code within the domain's own code repository. Another approach is to seperate out whats common and specific to use case this can be achieved with strategies such as - *wrapper function to encapsulate the common operations* or *make use of common libraries to share the capabilities*. 
@@ -54,11 +61,19 @@ This flexibility comes at the cost of Cold start as the default behaviour. Funct
 Solution to this problem is Warm start. Warm function have everything ready to serve a request very much like a Service actively waiting to serve a request.
 
 A hybrid approach is also possible with some FaaS frameworks where a function thats terminated is made available to serve subsequent request if it is within the expiry of the instance. This could however lead wastage of  limited resources (e.g. a DB Connection) are being reserved to these terminated instances even which they are not being actively used.
-## Serverless:
-Most FaaS providers provide Server Abstraction with their offering and like to identify it as the *Serverless*-ness managed service. While this takes away a lot of complexities it may impose restictions or leave us to choose from a set of defaults. Few examples of this:
+## *Serverless*-ness:
+Most FaaS providers provide Server Abstraction with their offering and like to identify it as the "Serverless" nature of the managed service. While this takes away a lot of complexities it may impose restictions or leave us to choose from a set of defaults. Few examples of this:
 * Choice of programming language. With some programming languages we may not be able to leverage all the resouces (e.g. multiple CPU cores).
 * Memory/CPU selection - in a lot of cases this comes as a package. It's not hard to over allocate or encounter crash before learning that resources are under allocated.
 * Function time out - FaaS functions generally have a timeout. The functions are killed beyond this timeout. It may require us to build control around any irrecoverable situations that may arise due to Atomicity or Consistency e.g. Corrupted file in an Elastic File System.
+## Event Processing:
+Functions can be used to consume Events. As mentioned in [Event Broker v/s Message Broker](/event-broker-vs-message-broker) there are certain characteristics of an event broker, some being - ordering and paritioning. These are strategies to scale. Message brokers guarantee ordering per shard or partition; thus a broker imposes a restriction on the consumer that a consumer can only consume from one consumer group
+The FaaS component offers an advantage of auto assiging a predefined consumer name with the event broker unlike a microservice where consumer has to be managed by the developer. With Synchronous trigger, consumers can consume from multiple shards or partitions at the same time but one partition cannot serve data to two consumers within the same group. Without this restiction the order would be compromised. 
+
+FaaS providers e.g. AWS Lambda provide implemenation that allows function instances to be defined based on a parallelization factor or concurrency limit. This is the maximum number of concurrency instances that can co-exist when there is a need to scale up. In AWS this can be set to upto 10 as of today. The lambda instances can scale upto number of partition keys per shard. if there are 3 shards with 5 different partition keys the max scaling for lambda with 10 currency limit will be 5 per shard or 15 in total.
+### Consumer Group Lag Metric
+Consumer Group Lag is the how far the current offset is from the head offset of the stream. 
+
 ## Committing offsets in case of Event Brokers:
 ## Consumer group 
 ## Orchestration & Choreography
