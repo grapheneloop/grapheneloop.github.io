@@ -2,128 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home title on Graphene Loop</title>
-    <link>http://localhost:1313/</link>
+    <link>http://localhost:34403/</link>
     <description>Recent content in Home title on Graphene Loop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Oct 2017 15:26:15 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 Oct 2017 15:26:15 +0000</lastBuildDate>
+    <atom:link href="http://localhost:34403/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Synchronous Communication</title>
-      <link>http://localhost:1313/interservice-communication-patterns/synch/</link>
-      <pubDate>Tue, 03 Oct 2023 15:26:15 +0000</pubDate>
-      
-      <guid>http://localhost:1313/interservice-communication-patterns/synch/</guid>
-      <description>Synchronous Communication between two systems means that the request will wait for response.
-Advantages: Disadvantages: HTTP/RESTful APIs gRPC GraphQL </description>
-    </item>
-    
-    <item>
-      <title>Asynchronous Communication</title>
-      <link>http://localhost:1313/interservice-communication-patterns/async/</link>
-      <pubDate>Tue, 03 Oct 2023 15:26:15 +0000</pubDate>
-      
-      <guid>http://localhost:1313/interservice-communication-patterns/async/</guid>
-      <description>Basis of Wifi Network Security Media Access Control (MAC) Address ifconfig you may see:
-eth0: A physical network card used for LAN Network used in wired connection. wlan0: A physical network adapter used for wireless connection. lo: loopback virtual network interface which lets you use the localhost. This will not have a MAC address. Note: You may see different names for the interface names. The following assumes the name of wireless interface as wlan0 for simplicity &amp;amp; clarity.</description>
-    </item>
-    
-    <item>
-      <title>Support for Multiple Communication Patterns</title>
-      <link>http://localhost:1313/interservice-communication-patterns/synch-and-async/</link>
-      <pubDate>Tue, 03 Oct 2023 15:26:15 +0000</pubDate>
-      
-      <guid>http://localhost:1313/interservice-communication-patterns/synch-and-async/</guid>
-      <description>Synchronous And Asychrnous with Messaging Queues Synchronous And Asychrnous using HTTP/RESTful APIs </description>
-    </item>
-    
-    <item>
-      <title>Mediator Pattern</title>
-      <link>http://localhost:1313/interservice-communication-patterns/mediator/</link>
-      <pubDate>Tue, 03 Oct 2023 15:26:15 +0000</pubDate>
-      
-      <guid>http://localhost:1313/interservice-communication-patterns/mediator/</guid>
-      <description>Basis of Wifi Network Security Media Access Control (MAC) Address ifconfig you may see:
-eth0: A physical network card used for LAN Network used in wired connection. wlan0: A physical network adapter used for wireless connection. lo: loopback virtual network interface which lets you use the localhost. This will not have a MAC address. Note: You may see different names for the interface names. The following assumes the name of wireless interface as wlan0 for simplicity &amp;amp; clarity.</description>
-    </item>
-    
-    <item>
-      <title>Intermediary Pattern</title>
-      <link>http://localhost:1313/interservice-communication-patterns/intermediary/</link>
-      <pubDate>Tue, 03 Oct 2023 15:26:15 +0000</pubDate>
-      
-      <guid>http://localhost:1313/interservice-communication-patterns/intermediary/</guid>
-      <description>Basis of Wifi Network Security Media Access Control (MAC) Address ifconfig you may see:
-eth0: A physical network card used for LAN Network used in wired connection. wlan0: A physical network adapter used for wireless connection. lo: loopback virtual network interface which lets you use the localhost. This will not have a MAC address. Note: You may see different names for the interface names. The following assumes the name of wireless interface as wlan0 for simplicity &amp;amp; clarity.</description>
-    </item>
-    
-    <item>
-      <title>Pub-Sub Model</title>
-      <link>http://localhost:1313/interservice-communication-patterns/pub-sub/</link>
-      <pubDate>Tue, 03 Oct 2023 15:26:15 +0000</pubDate>
-      
-      <guid>http://localhost:1313/interservice-communication-patterns/pub-sub/</guid>
-      <description>Basis of Wifi Network Security Media Access Control (MAC) Address ifconfig you may see:
-eth0: A physical network card used for LAN Network used in wired connection. wlan0: A physical network adapter used for wireless connection. lo: loopback virtual network interface which lets you use the localhost. This will not have a MAC address. Note: You may see different names for the interface names. The following assumes the name of wireless interface as wlan0 for simplicity &amp;amp; clarity.</description>
-    </item>
-    
-    <item>
-      <title>Callback</title>
-      <link>http://localhost:1313/interservice-communication-patterns/callback/</link>
-      <pubDate>Tue, 03 Oct 2023 15:26:15 +0000</pubDate>
-      
-      <guid>http://localhost:1313/interservice-communication-patterns/callback/</guid>
-      <description>Basis of Wifi Network Security Media Access Control (MAC) Address ifconfig you may see:
-eth0: A physical network card used for LAN Network used in wired connection. wlan0: A physical network adapter used for wireless connection. lo: loopback virtual network interface which lets you use the localhost. This will not have a MAC address. Note: You may see different names for the interface names. The following assumes the name of wireless interface as wlan0 for simplicity &amp;amp; clarity.</description>
-    </item>
-    
-    <item>
-      <title>Event Sourcing &amp; CQRS</title>
-      <link>http://localhost:1313/interservice-communication-patterns/event-sourcing-and-cqrs/</link>
-      <pubDate>Tue, 03 Oct 2023 15:26:15 +0000</pubDate>
-      
-      <guid>http://localhost:1313/interservice-communication-patterns/event-sourcing-and-cqrs/</guid>
-      <description>Basis of Wifi Network Security Media Access Control (MAC) Address ifconfig you may see:
-eth0: A physical network card used for LAN Network used in wired connection. wlan0: A physical network adapter used for wireless connection. lo: loopback virtual network interface which lets you use the localhost. This will not have a MAC address. Note: You may see different names for the interface names. The following assumes the name of wireless interface as wlan0 for simplicity &amp;amp; clarity.</description>
-    </item>
-    
-    <item>
-      <title>Remote Procedure Call</title>
-      <link>http://localhost:1313/interservice-communication-patterns/remort-procedure-call/</link>
-      <pubDate>Tue, 03 Oct 2023 15:26:15 +0000</pubDate>
-      
-      <guid>http://localhost:1313/interservice-communication-patterns/remort-procedure-call/</guid>
-      <description>Basis of Wifi Network Security Media Access Control (MAC) Address ifconfig you may see:
-eth0: A physical network card used for LAN Network used in wired connection. wlan0: A physical network adapter used for wireless connection. lo: loopback virtual network interface which lets you use the localhost. This will not have a MAC address. Note: You may see different names for the interface names. The following assumes the name of wireless interface as wlan0 for simplicity &amp;amp; clarity.</description>
-    </item>
-    
-    <item>
-      <title>Websocket</title>
-      <link>http://localhost:1313/interservice-communication-patterns/websocket/</link>
-      <pubDate>Tue, 03 Oct 2023 15:26:15 +0000</pubDate>
-      
-      <guid>http://localhost:1313/interservice-communication-patterns/websocket/</guid>
-      <description>HTTP/RESTful APIs gRPC GraphQL </description>
-    </item>
-    
-    <item>
-      <title>Direct Database Access</title>
-      <link>http://localhost:1313/interservice-communication-patterns/direct-database-access/</link>
-      <pubDate>Tue, 03 Oct 2023 15:26:15 +0000</pubDate>
-      
-      <guid>http://localhost:1313/interservice-communication-patterns/direct-database-access/</guid>
-      <description>HTTP/RESTful APIs gRPC GraphQL </description>
-    </item>
-    
-    <item>
-      <title>About Hugo</title>
-      <link>http://localhost:1313/about/</link>
+      <title>About Graphene Loop</title>
+      <link>http://localhost:34403/about/</link>
       <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/about/</guid>
-      <description>Hugo is a static site engine written in Go.
-It makes use of a variety of open source projects including:
-Cobra Viper J Walter Weatherman Cast Learn more and contribute on GitHub.</description>
+      <guid>http://localhost:34403/about/</guid>
+      <description>Graphene Loop </description>
     </item>
-    
   </channel>
 </rss>

@@ -10,9 +10,17 @@ TableOfContents: true
 ---
 
 # Basis of Wifi Network Security
+## Getting started
+* Install Virtualbox
+* Download & Install  https://www.virtualbox.org/wiki/Downloads [All supported Platforms](https://download.virtualbox.org/virtualbox/7.0.12/Oracle_VM_VirtualBox_Extension_Pack-7.0.12.vbox-extpack)
+* Enable Usb
+```bash
+sudo usermod -a -G vboxusers "$USER"
+```
 ## Media Access Control (MAC) Address
 ```shell
-ifconfig
+$ ifconfig
+$ export WLAN=wlx0c91602bd0db
 ```
 you may see:
 - eth0: A physical network card used for LAN Network used in wired connection. 
@@ -24,15 +32,15 @@ you may see:
 To be able to do to this following are the steps:
 1. Disable the interface
 ```shell
-ifconfig wlan0 down
+ifconfig $WLAN down
 ```
 2. Set the Hardware address (has to start with 00)
 ```shell
-ifconfig wlan0 hw ether 00:11:22:33:44:55
+ifconfig $WLAN hw ether 00:11:22:33:44:55
 ```
 3. Start the interface
 ```shell
-ifconfig up
+ifconfig $WLAN up
 ```
 Once restarted the MAC address will be restored. 
 
@@ -77,13 +85,13 @@ iwconfig wlan0 mode monitor
 ```
 5. Bring up the wireless interface.
 ```shell
-ifconfig wlan0 up
+ifconfig $WLAN up
 ```
 
 ## Packet Sniffing
 1. While on the Monitor mode, then
 ```shell
-airodump-ng wlan0
+airodump-ng $WLAN
 ```
 important attributes:
 * BSSID - MAC Address of target Network
@@ -99,13 +107,15 @@ important attributes:
 ## Bands of Wifi Network
 Two - 2.4 & 5 Hz
 ```shell
-airodump-ng --band abg wlan0 
+airodump-ng --band abg $WLAN 
 ```
+ D0:6D:C9:E0:F6:19  -80        3        3    0  11  195   WPA2 CCMP   PSK  Optus_E0F617                                                                                               
 
 ## Sniffing
 ```shell
-BSSID=00:11:22:33:44:55
-CHANNEL=2
-airodump-ng --bssid $BSSID --channel $CHANNEL --write test-file wlan0
+BSSID=D0:6D:C9:E0:F6:19
+CHANNEL=11
+airodump-ng --bssid $BSSID --channel $CHANNEL --write test-file $WLAN
 ```
 Now you see two sections when sniffing a particular target network. The second section shows the stations that being connected to.
+

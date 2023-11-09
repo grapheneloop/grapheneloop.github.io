@@ -2,56 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/faas/</loc>
+    <loc>http://localhost:34403/faas/</loc>
     <lastmod>2018-10-08T15:26:15+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/ordering-in-distributed-systems/</loc>
-    <lastmod>2018-10-08T15:26:15+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/interservice-communication-patterns/</loc>
-    <lastmod>2018-12-08T15:26:15+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/interservice-communication-patterns/synch/</loc>
-    <lastmod>2018-12-08T15:26:15+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/interservice-communication-patterns/async/</loc>
-    <lastmod>2018-12-08T15:26:15+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/interservice-communication-patterns/synch-and-async/</loc>
-    <lastmod>2018-12-08T15:26:15+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/interservice-communication-patterns/mediator/</loc>
-    <lastmod>2018-12-08T15:26:15+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/interservice-communication-patterns/intermediary/</loc>
-    <lastmod>2018-12-08T15:26:15+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/interservice-communication-patterns/pub-sub/</loc>
-    <lastmod>2018-12-08T15:26:15+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/interservice-communication-patterns/callback/</loc>
-    <lastmod>2018-12-08T15:26:15+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/interservice-communication-patterns/event-sourcing-and-cqrs/</loc>
-    <lastmod>2018-12-08T15:26:15+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/interservice-communication-patterns/remort-procedure-call/</loc>
-    <lastmod>2018-12-08T15:26:15+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/interservice-communication-patterns/websocket/</loc>
-    <lastmod>2018-12-08T15:26:15+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/interservice-communication-patterns/direct-database-access/</loc>
-    <lastmod>2018-12-08T15:26:15+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:34403/</loc>
     <lastmod>2019-10-26T15:26:15+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>http://localhost:34403/about/</loc>
     <lastmod>2014-04-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:34403/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>http://localhost:34403/tags/</loc>
   </url>
 </urlset>

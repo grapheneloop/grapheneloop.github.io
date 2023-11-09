@@ -12,16 +12,17 @@ TableOfContents: true
 # Introduction
 A function is an independent sequence of actions that can be reused and operates with a level of abstraction. It has the capability to accept input parameters and potentially provide an output. Each function consists of an execution process, a triggering mechanism, zero or more input parameters, and typically zero or one output result. When executed, it can either complete successfully or encounter errors and fail; with the option of including an exception handling mechanism. These attributes apply universally to any function or Function as a Service (FaaS) implementations.
 
-# Some of the qualities of a function:
-## Single Responsibility Principle
+## Qualities of a function:
+### Single Responsibility Principle
 An effective function should perform a singular, well-defined task, which encourages the principle of modularity.
-## Statelessness/No Side Effects
+### Statelessness/No Side Effects
 A well-constructed function should be devoid of state, meaning it does not alter global variables or induce unintended side effects. These functions encapsulate their behavior and maintain the integrity of the program's state, allowing for externalization of state, if needed.
-## Testability
+### Testability
 A function should be capable of being tested both in isolation and within the context of its specific sub-domain.
-# Types of functions:
 ## Modularity and Reusability:
 A function should be designed for reusability. However, when considering a Function as a Service (FaaS) in a Microservices ecosystem, each instance of the function should be associated with a specific Bounded Context within one of the subdomains. For instance, the same AWS Lambda function can serve multiple subdomains and may be triggered from various trigger points.
+
+# Types of functions:
 ## Deterministic Functions
 Deterministic function is one which returns same output for a given input. This makes it are more predictable and more easily testable. Deterministic functions however can cause side effects.
 ## Pure Functions
@@ -29,15 +30,15 @@ Similar to deterministic functions, but additionally **idempotent** - i.e.can be
 ## Stateful and Stateless Functions
 It is possible to alter the internal state of a function, e.g. by means of changing a global variable from within the function itself. While this can be appropriate for some specific use cases, like tracking whether the function was invoked before or FaaS instance is a fresh instance from pool or cloned from another instance etc.., it can become problematic and difficult to debug in most usecases especially in multi-threaded runtime environments or in a Function as a Service (FaaS) context where state is expected to be shared across multiple instantiations.
 
-# Problems/Solutions - Patterns/BestPractices:
+# Design Patterns/BestPractices:
 Working with Functions as a Service (FaaS) offers various advantages, but it also introduces a range of challenges that are inherent to this approach. Here are some key considerations and strategies to effectively manage the issues associated with FaaS usage.
 ## Built to Scale
 FaaS functions are almost always designed to scale by cloning [Y-Axis Scaling](https://akfpartners.com/growth-blog/scale-cube). So depending on the provider different strategies such as cloning of function instances may be adopted to quickly meet the scalability needs. Hence it becomes necessary to design function instances to not behave differently based on whether it's a newly created instance, an instance reused from a pool or even a cloned instance.
 Depending on the environment this however may introduce new problems to solve e.g. order of processing, cold start.
-### Problem of Ordering
-#### Use of Event Broker
+## Problem with Ordering
+## Use of Event Broker
 If ordering is important particularly with events one might need to resort to Channels such as an event broker (as against a Message Broker). Event Broker guarantees order at a shard or partition level; and since the number of consumers <= number of partitions(other words one consumer can read from multiple shards but the reverse isn't possible), this can give some level of guarantee. 
-#### Use of FIFO Message Channel
+## Use of FIFO Message Channel
 FIFO Queues maintain order of event based on a message Group Id (similar to an Event Broker where a partition Id is used) and one when one message is acknowledged the next message in the same group is served. This is another strategy to guarantee ordering.
 
 However the above can limit scalability particularly within the same Message Group or Partition. The solution is to use algorithms for [Event Ordering in Distributed Systems](/ordering-in-distributed-systems/) or park the events in a datastore and act upon an event when the dependant tasks are completed.
@@ -74,10 +75,10 @@ FaaS providers e.g. AWS Lambda provide implemenation that allows function instan
 ### Consumer Group Lag Metric
 Consumer Group Lag is the how far the current offset is from the head offset of the stream. 
 
-## Committing offsets in case of Event Brokers:
-## Consumer group 
-## Orchestration & Choreography
-![AWS example](./images/FaaS%20Choreography%20&%20Orchestration.drawio.svg) 
-### Consistency of rules
-### Availablility
-### Atomicity of operation
+
+# Further Topics:
+* Committing offsets in case of Event Brokers:
+* Consumer group 
+* Consistency of rules
+* Availablility
+* Atomicity of operation

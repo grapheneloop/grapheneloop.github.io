@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=34403&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>Function as a Service (FaaS) - Graphene Loop</title>
 <meta name="description" content="Function as a Service (FaaS)">
-<meta name="generator" content="Hugo 0.113.0">
-<link href="http://localhost:1313//index.xml" rel="alternate" type="application/rss+xml">
-<link rel="canonical" href="http://localhost:1313/faas/">
-<link rel="stylesheet" href="http://localhost:1313/css/theme.min.css">
-<link rel="stylesheet" href="http://localhost:1313/css/chroma.min.css">
-<script defer src="http://localhost:1313//js/fontawesome6/all.min.js"></script>
+<meta name="generator" content="Hugo 0.120.4">
+<link href="http://localhost:34403//index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="http://localhost:34403/faas/">
+<link rel="stylesheet" href="http://localhost:34403/css/theme.min.css">
+<link rel="stylesheet" href="http://localhost:34403/css/chroma.min.css">
+<script defer src="http://localhost:34403//js/fontawesome6/all.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha256-4XodgW4TwIJuDtf+v6vDJ39FVxI0veC/kSCCmnFp7ck=" crossorigin="anonymous"></script>
-<script src="http://localhost:1313/js/bundle.js"></script><style>
+<script src="http://localhost:34403/js/bundle.js"></script><style>
 :root {--custom-background-color: darkblue;}
 </style>
 <meta property="og:title" content="Function as a Service (FaaS)" />
 <meta property="og:description" content="Function as a Service (FaaS)" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="http://localhost:1313/faas/" /><meta property="og:image" content="http://localhost:1313/images/og-image.png"/><meta property="og:site_name" content="Hugo Techdoc Theme" />
+<meta property="og:url" content="http://localhost:34403/faas/" /><meta property="og:image" content="http://localhost:34403/images/og-image.png"/><meta property="og:site_name" content="Hugo Techdoc Theme" />
+
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="http://localhost:1313/images/og-image.png"/>
+<meta name="twitter:image" content="http://localhost:34403/images/og-image.png"/>
 
 <meta name="twitter:title" content="Function as a Service (FaaS)"/>
 <meta name="twitter:description" content="Function as a Service (FaaS)"/>
@@ -40,38 +41,38 @@
 <ul>
 <li id="home" class=""><a href="/"><i class='fa fa-heart'></i>&nbsp;Home</a></li>
 <li id="twitter" class="twitter-menu-item"><a href="https://twitter.com/thingsym"><b>pre!</b> Twitter <b>post!</b></a></li>
-<li class=""><a href="/about/">About Hugo</a></li></ul>
+<li class=""><a href="/about/">About Graphene Loop</a></li></ul>
 </nav>
 </div>
 
 <div class="content-container">
 <main><h1>Function as a Service (FaaS)</h1><h1 id="introduction">Introduction</h1>
 <p>A function is an independent sequence of actions that can be reused and operates with a level of abstraction. It has the capability to accept input parameters and potentially provide an output. Each function consists of an execution process, a triggering mechanism, zero or more input parameters, and typically zero or one output result. When executed, it can either complete successfully or encounter errors and fail; with the option of including an exception handling mechanism. These attributes apply universally to any function or Function as a Service (FaaS) implementations.</p>
-<h1 id="some-of-the-qualities-of-a-function">Some of the qualities of a function:</h1>
-<h2 id="single-responsibility-principle">Single Responsibility Principle</h2>
+<h2 id="qualities-of-a-function">Qualities of a function:</h2>
+<h3 id="single-responsibility-principle">Single Responsibility Principle</h3>
 <p>An effective function should perform a singular, well-defined task, which encourages the principle of modularity.</p>
-<h2 id="statelessnessno-side-effects">Statelessness/No Side Effects</h2>
+<h3 id="statelessnessno-side-effects">Statelessness/No Side Effects</h3>
 <p>A well-constructed function should be devoid of state, meaning it does not alter global variables or induce unintended side effects. These functions encapsulate their behavior and maintain the integrity of the program&rsquo;s state, allowing for externalization of state, if needed.</p>
-<h2 id="testability">Testability</h2>
+<h3 id="testability">Testability</h3>
 <p>A function should be capable of being tested both in isolation and within the context of its specific sub-domain.</p>
-<h1 id="types-of-functions">Types of functions:</h1>
 <h2 id="modularity-and-reusability">Modularity and Reusability:</h2>
 <p>A function should be designed for reusability. However, when considering a Function as a Service (FaaS) in a Microservices ecosystem, each instance of the function should be associated with a specific Bounded Context within one of the subdomains. For instance, the same AWS Lambda function can serve multiple subdomains and may be triggered from various trigger points.</p>
+<h1 id="types-of-functions">Types of functions:</h1>
 <h2 id="deterministic-functions">Deterministic Functions</h2>
 <p>Deterministic function is one which returns same output for a given input. This makes it are more predictable and more easily testable. Deterministic functions however can cause side effects.</p>
 <h2 id="pure-functions">Pure Functions</h2>
 <p>Similar to deterministic functions, but additionally <strong>idempotent</strong> - i.e.can be called any number of times without causing any side effects. e.g. of a side effect is Payment made on a purchase.</p>
 <h2 id="stateful-and-stateless-functions">Stateful and Stateless Functions</h2>
 <p>It is possible to alter the internal state of a function, e.g. by means of changing a global variable from within the function itself. While this can be appropriate for some specific use cases, like tracking whether the function was invoked before or FaaS instance is a fresh instance from pool or cloned from another instance etc.., it can become problematic and difficult to debug in most usecases especially in multi-threaded runtime environments or in a Function as a Service (FaaS) context where state is expected to be shared across multiple instantiations.</p>
-<h1 id="problemssolutions---patternsbestpractices">Problems/Solutions - Patterns/BestPractices:</h1>
+<h1 id="design-patternsbestpractices">Design Patterns/BestPractices:</h1>
 <p>Working with Functions as a Service (FaaS) offers various advantages, but it also introduces a range of challenges that are inherent to this approach. Here are some key considerations and strategies to effectively manage the issues associated with FaaS usage.</p>
 <h2 id="built-to-scale">Built to Scale</h2>
 <p>FaaS functions are almost always designed to scale by cloning <a href="https://akfpartners.com/growth-blog/scale-cube">Y-Axis Scaling</a>. So depending on the provider different strategies such as cloning of function instances may be adopted to quickly meet the scalability needs. Hence it becomes necessary to design function instances to not behave differently based on whether it&rsquo;s a newly created instance, an instance reused from a pool or even a cloned instance.
 Depending on the environment this however may introduce new problems to solve e.g. order of processing, cold start.</p>
-<h3 id="problem-of-ordering">Problem of Ordering</h3>
-<h4 id="use-of-event-broker">Use of Event Broker</h4>
+<h2 id="problem-with-ordering">Problem with Ordering</h2>
+<h2 id="use-of-event-broker">Use of Event Broker</h2>
 <p>If ordering is important particularly with events one might need to resort to Channels such as an event broker (as against a Message Broker). Event Broker guarantees order at a shard or partition level; and since the number of consumers &lt;= number of partitions(other words one consumer can read from multiple shards but the reverse isn&rsquo;t possible), this can give some level of guarantee.</p>
-<h4 id="use-of-fifo-message-channel">Use of FIFO Message Channel</h4>
+<h2 id="use-of-fifo-message-channel">Use of FIFO Message Channel</h2>
 <p>FIFO Queues maintain order of event based on a message Group Id (similar to an Event Broker where a partition Id is used) and one when one message is acknowledged the next message in the same group is served. This is another strategy to guarantee ordering.</p>
 <p>However the above can limit scalability particularly within the same Message Group or Partition. The solution is to use algorithms for <a href="/ordering-in-distributed-systems/">Event Ordering in Distributed Systems</a> or park the events in a datastore and act upon an event when the dependant tasks are completed.</p>
 <h2 id="functions-as-reusable-and-modular-set-of-operations">Functions as Reusable and Modular set of operations</h2>
@@ -103,21 +104,22 @@ The FaaS component offers an advantage of auto assiging a predefined consumer na
 <p>FaaS providers e.g. AWS Lambda provide implemenation that allows function instances to be defined based on a parallelization factor or concurrency limit. This is the maximum number of concurrency instances that can co-exist when there is a need to scale up. In AWS this can be set to upto 10 as of today. The lambda instances can scale upto number of partition keys per shard. if there are 3 shards with 5 different partition keys the max scaling for lambda with 10 currency limit will be 5 per shard or 15 in total.</p>
 <h3 id="consumer-group-lag-metric">Consumer Group Lag Metric</h3>
 <p>Consumer Group Lag is the how far the current offset is from the head offset of the stream.</p>
-<h2 id="committing-offsets-in-case-of-event-brokers">Committing offsets in case of Event Brokers:</h2>
-<h2 id="consumer-group">Consumer group</h2>
-<h2 id="orchestration--choreography">Orchestration &amp; Choreography</h2>
-<p><img src="./images/FaaS%20Choreography%20&amp;%20Orchestration.drawio.svg" alt="AWS example"></p>
-<h3 id="consistency-of-rules">Consistency of rules</h3>
-<h3 id="availablility">Availablility</h3>
-<h3 id="atomicity-of-operation">Atomicity of operation</h3>
+<h1 id="further-topics">Further Topics:</h1>
+<ul>
+<li>Committing offsets in case of Event Brokers:</li>
+<li>Consumer group</li>
+<li>Consistency of rules</li>
+<li>Availablility</li>
+<li>Atomicity of operation</li>
+</ul>
 <div class="edit-meta">
 Last updated on 8 Oct 2018
 
 
 <br>
 Published on 8 Oct 2018
-<br><a href="https://grapheneloop.github.io//edit/master/faas/_index.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="http://localhost:1313/" title="Home title"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Home title</a>
-<a class="nav nav-next" href="http://localhost:1313/ordering-in-distributed-systems/" title="Ordering">Next - Ordering <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+<br><a href="https://grapheneloop.github.io//edit/master/faas/_index.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="http://localhost:34403/" title="Home title"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Home title</a>
+
 </nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://grapheneloop.github.io/">Thingsym</a>.</p>
 </footer>
 </main>
@@ -125,31 +127,9 @@ Published on 8 Oct 2018
 
 <nav class="open-menu">
 <ul>
-<li class=""><a href="http://localhost:1313/">Home</a></li>
+<li class=""><a href="http://localhost:34403/">Home</a></li>
 
-<li class=" active"><a href="http://localhost:1313/faas/">Function as a Service (FaaS)</a>
-  
-</li>
-
-<li class=""><a href="http://localhost:1313/ordering-in-distributed-systems/">Ordering</a>
-  
-</li>
-
-<li class=""><a href="http://localhost:1313/interservice-communication-patterns/">Interservice Communication Patterns</a>
-  
-<ul class="sub-menu">
-<li class=""><a href="http://localhost:1313/interservice-communication-patterns/synch/">Synchronous Communication</a></li>
-<li class=""><a href="http://localhost:1313/interservice-communication-patterns/async/">Asynchronous Communication</a></li>
-<li class=""><a href="http://localhost:1313/interservice-communication-patterns/synch-and-async/">Support for Multiple Communication Patterns</a></li>
-<li class=""><a href="http://localhost:1313/interservice-communication-patterns/mediator/">Mediator Pattern</a></li>
-<li class=""><a href="http://localhost:1313/interservice-communication-patterns/intermediary/">Intermediary Pattern</a></li>
-<li class=""><a href="http://localhost:1313/interservice-communication-patterns/pub-sub/">Pub-Sub Model</a></li>
-<li class=""><a href="http://localhost:1313/interservice-communication-patterns/callback/">Callback</a></li>
-<li class=""><a href="http://localhost:1313/interservice-communication-patterns/event-sourcing-and-cqrs/">Event Sourcing &amp; CQRS</a></li>
-<li class=""><a href="http://localhost:1313/interservice-communication-patterns/remort-procedure-call/">Remote Procedure Call</a></li>
-<li class=""><a href="http://localhost:1313/interservice-communication-patterns/websocket/">Websocket</a></li>
-<li class=""><a href="http://localhost:1313/interservice-communication-patterns/direct-database-access/">Direct Database Access</a></li>
-</ul>
+<li class=" active"><a href="http://localhost:34403/faas/">Function as a Service (FaaS)</a>
   
 </li>
 </ul>
